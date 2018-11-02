@@ -110,8 +110,10 @@
     <Compile Include="App_Start\MainEntry.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="App_Start\WebApiTransactionFilter.cs" />
     <Compile Include="Controllers\EmptyController.cs" />
     <Compile Include="Controllers\EmptyApiController.cs" />
+    <Compile Include="Controllers\FooApiController.cs" />
     <Compile Include="Controllers\FooController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

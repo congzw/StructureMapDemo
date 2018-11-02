@@ -15,5 +15,11 @@ namespace Demos.Web
                 defaults: new { id = RouteParameter.Optional }
             );
         }
+        
+        public static void RegisterGlobalFilters(HttpConfiguration config)
+        {
+            //事务控制WebApi
+            config.Filters.Add(new WebApiTransactionFilter());
+        }
     }
 }

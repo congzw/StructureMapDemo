@@ -13,7 +13,11 @@ demo for StructureMap use with MVC5 and WebApi2
     2.3 Mvc => ~/Foo/Index OK
     2.4 Mvc => ~/Foo/IndexEx OK
     
-- 3 [] add webapi di support
+- 3 [x] add webapi di support
+    3.1 add StructureMap.WebApi2 to Web.Dependencies
+    3.2 fix StructureMap config
+    3.3 webapi => ~/api/foo OK : commit tx
+    3.4 webapi => ~/api/fooEx OK : rollback tx
 
 ## project relations
 
