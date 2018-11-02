@@ -30,13 +30,33 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\CommonServiceLocator.2.0.4\lib\net45\CommonServiceLocator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\DateTimeExtensions.cs" />
+    <Compile Include="Data\ISimpleRepository.cs" />
+    <Compile Include="Data\ITransactionManager.cs" />
+    <Compile Include="Data\NbEntity.cs" />
+    <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Ioc\CoreServiceProvider.cs" />
+    <Compile Include="Ioc\NullServiceLocator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UtilsDateTime.cs" />
+    <Compile Include="UtilsLogger.cs" />
+    <Compile Include="_Mock\BaseMockObject.cs" />
+    <Compile Include="_Mock\MockRepository.cs" />
+    <Compile Include="_Mock\MockSession.cs" />
+    <Compile Include="_Mock\MockTransactionManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
