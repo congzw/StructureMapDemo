@@ -1,5 +1,7 @@
 using System;
 using StructureMap;
+using StructureMap.Configuration.DSL;
+using StructureMap.Graph;
 
 namespace Demos.Web.Dependencies.DependencyResolution.Registries
 {
@@ -11,7 +13,7 @@ namespace Demos.Web.Dependencies.DependencyResolution.Registries
                 scan =>
                 {
                     //assemblies
-                    scan.AssembliesAndExecutablesFromApplicationBaseDirectory(assembly =>
+                    scan.AssembliesFromApplicationBaseDirectory(assembly =>
                     {
                         var name = assembly.GetName().Name;
                         return name.StartsWith("Demos", StringComparison.OrdinalIgnoreCase);

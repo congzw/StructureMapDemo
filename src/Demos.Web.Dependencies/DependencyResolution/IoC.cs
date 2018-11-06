@@ -2,6 +2,7 @@ using System.Diagnostics;
 using CommonServiceLocator;
 using Demos.Common.Ioc;
 using StructureMap;
+using StructureMap.Graph;
 
 namespace Demos.Web.Dependencies.DependencyResolution
 {
@@ -14,7 +15,7 @@ namespace Demos.Web.Dependencies.DependencyResolution
                 c.Scan(_ =>
                 {
                     //assemblies
-                    _.AssembliesAndExecutablesFromApplicationBaseDirectory(assembly =>
+                    _.AssembliesFromApplicationBaseDirectory(assembly =>
                     {
                         var name = assembly.GetName().Name;
                         return name.StartsWith("Demos");
@@ -37,8 +38,8 @@ namespace Demos.Web.Dependencies.DependencyResolution
 
         private static void ShowDebugInfo(Container container)
         {
-            var whatDidIScan = container.WhatDidIScan();
-            Debug.Write(whatDidIScan);
+            //var whatDidIScan = container.WhatDidIScan();
+            //Debug.Write(whatDidIScan);
 
             var whatDoIHave = container.WhatDoIHave();
             Debug.Write(whatDoIHave);
